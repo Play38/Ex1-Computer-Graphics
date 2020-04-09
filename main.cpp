@@ -147,26 +147,6 @@ void drawCircle(int x1, int y1, int x2, int y2)
 	}
 }
 
-void drawRadialBrush(int x, int y)
-{
-	int xc = glutGet(GLUT_WINDOW_WIDTH) / 2;
-	int yc = glutGet(GLUT_WINDOW_HEIGHT) / 2;
-	int dx, dy;
-
-	dx = xc - x;
-	dy = yc - y;
-
-	drawPixel(xc + dx, yc + dy);
-	drawPixel(xc - dx, yc + dy);
-	drawPixel(xc + dx, yc - dy);
-	drawPixel(xc - dx, yc - dy);
-	drawPixel(xc + dy, yc + dx);
-	drawPixel(xc - dy, yc + dx);
-	drawPixel(xc + dy, yc - dx);
-	drawPixel(xc - dy, yc - dx);
-}
-
-
 
 void keyboard(unsigned char key, int xIn, int yIn)
 {
