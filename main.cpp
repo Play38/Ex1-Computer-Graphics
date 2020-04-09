@@ -137,12 +137,12 @@ void myCircle(int x1, int y1, int x2, int y2)
 		x++;
 		if (d < 0)
 		{
-			d += 2 * x + 3;
+			d += (double)2 * x + 3;
 		}
 		else
 		{
 			y--;
-			d += 2 * (x - y) + 5;
+			d += (double)2 * (x - y) + 5;
 		}
 	}
 }
