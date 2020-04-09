@@ -57,7 +57,7 @@ void drawPixel(int mousex, int mousey)
 
 
 
-void drawLine(int x1, int y1, int x2, int y2)
+void myLine(int x1, int y1, int x2, int y2)
 {
 	bool changed = false;
 	if (abs(x2 - x1) < abs(y2 - y1))
@@ -114,7 +114,7 @@ void drawLine(int x1, int y1, int x2, int y2)
 /**
  * Midpoint circle algorithm
  */
-void drawCircle(int x1, int y1, int x2, int y2)
+void myCircle(int x1, int y1, int x2, int y2)
 {
 	int r = sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2));
 	double d;
@@ -176,9 +176,9 @@ void mouse(int bin, int state, int x, int y)
 				else
 				{
 					if (shape == 1)
-						drawLine(tmpx, tmpy, x, y);
+						myLine(tmpx, tmpy, x, y);
 					else if (shape == 2)
-						drawCircle(tmpx, tmpy, x, y);
+						myCircle(tmpx, tmpy, x, y);
 					isSecond = false;
 				}
 			}
